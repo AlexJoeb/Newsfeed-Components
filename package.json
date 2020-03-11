@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/AlexJoeb/Newsfeed-Components#readme",
   "dependencies": {
+    "jquery": "^3.4.1",
     "less-watch-compiler": "^1.14.6"
   }
 }
