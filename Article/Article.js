@@ -154,5 +154,5 @@ const template = data => {
 };
 
 data.forEach(item =>
-    document.querySelector(".articles").append(template(item))
+    $(".articles").append(template(item))
 );

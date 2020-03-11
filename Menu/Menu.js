@@ -46,9 +46,8 @@ const templateMenu = items => {
         ul.append(li);
     });
 
-    document.querySelector(".menu-button").addEventListener("click", () => {
-      if(container.className.split(" ").includes("menu--open")) container.className = "menu";
-      else container.className += " menu--open";
+    $(".menu-button").on("click", () => {
+      container.classList.toggle("menu--open");
     });
 
     container.append(ul);
@@ -56,4 +55,4 @@ const templateMenu = items => {
     return container;
 };
 
-document.querySelector(".header").append(templateMenu(menuItems));
+$(".header").append(templateMenu(menuItems));
