@@ -1,12 +1,12 @@
 /* This is the data we will be using, study it but don't change anything, yet. */
 
 let menuItems = [
-  'Students',
-  'Faculty',
-  "What's New",
-  'Tech Trends',
-  'Music',
-  'Log Out'
+    "Students",
+    "Faculty",
+    "What's New",
+    "Tech Trends",
+    "Music",
+    "Log Out"
 ];
 
 /* 
@@ -33,3 +33,26 @@ let menuItems = [
   Step 6: add the menu component to the DOM.
   
 */
+
+const templateMenu = items => {
+    const container = document.createElement("div");
+    container.classList.add("menu");
+
+    const ul = document.createElement("ul");
+
+    items.forEach(item => {
+        const li = document.createElement("li");
+        li.textContent = item;
+        ul.append(li);
+    });
+
+    $(".menu-button").on("click", () => {
+      container.classList.toggle("menu--open");
+    });
+
+    container.append(ul);
+
+    return container;
+};
+
+$(".header").append(templateMenu(menuItems));
